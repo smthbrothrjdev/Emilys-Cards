@@ -15,6 +15,18 @@ public class FlashCardEntity {
     private Integer timesCorrect;
     private Integer totalViews;
 
+    @ManyToOne
+    @JoinColumn(name = "flashcard_set_entity_id")
+    private FlashcardSetEntity flashcardSetEntity;
+
+    public FlashcardSetEntity getFlashcardSetEntity() {
+        return flashcardSetEntity;
+    }
+
+    public void setFlashcardSetEntity(FlashcardSetEntity flashcardSetEntity) {
+        this.flashcardSetEntity = flashcardSetEntity;
+    }
+
     public String getFront() {
         return front;
     }

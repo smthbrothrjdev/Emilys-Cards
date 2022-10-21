@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@CrossOrigin()
 public class FlashCardController {
+
+
 
  private final FlashCardService fcs;
 
